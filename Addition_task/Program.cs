@@ -9,17 +9,19 @@ namespace Addition_task
     {
         static void Main(string[] args)
         {
-            const char SEPARATION = '.';
-            string dateOfBirthday;
-            int counter = 0;
-            int day, month, year = 0;
+            string ddMmMyBirtdhday;
+            int day, month;
+            DateTime birthdayDateInAGivenYear, now = DateTime.Now;
 
-            Console.Write("Дата рождения (dd.mm.yyyy) = ");
-            dateOfBirthday = Console.ReadLine();
+            Console.Write("Дата рождения (dd.mm) = ");
+            ddMmMyBirtdhday = Console.ReadLine();
 
-            day = Int32.Parse(dateOfBirthday[0..2]);
-            month = Int32.Parse(dateOfBirthday[3..5]);
-            year = Int32.Parse(dateOfBirthday[6..9]);
+            day = Int32.Parse(ddMmMyBirtdhday[0..2]);
+            month = Int32.Parse(ddMmMyBirtdhday[3..5]);
+
+            birthdayDateInAGivenYear = new DateTime(now.Year, month, day);
+
+
 
             //for (int i = 0; i < dateOfBirthday.Length; i++)
             //{
