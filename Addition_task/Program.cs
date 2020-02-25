@@ -22,27 +22,8 @@ namespace Addition_task
 
             birthdayDateInAGivenYear = new DateTime(now.Year, month, day);
 
-
-
-            //for (int i = 0; i < dateOfBirthday.Length; i++)
-            //{
-            //    if (dateOfBirthday[i]=='.')
-            //    {
-            //        counter++;
-            //        if (counter == 1)
-            //        {
-            //            day = Int32.Parse(dateOfBirthday[0..2]);
-            //        }
-
-            //        else
-            //        {
-            //            month = Int32.Parse(dateOfBirthday[3..5]);
-            //            year = Int32.Parse(dateOfBirthday[6..9]);
-            //            break;
-            //        }
-            //    }
-            //}
-
+            Console.WriteLine($"До дня рождения осталось {(birthdayDateInAGivenYear-DateTime.Now).Days} дней");
+            
             Console.ReadKey();
         }
     }
