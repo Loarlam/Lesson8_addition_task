@@ -13,6 +13,7 @@ namespace Addition_task
             int day, month;
             DateTime birthdayDateInAGivenYear, now = DateTime.Now;
 
+
             Console.Write("Дата рождения (dd.mm) = ");
             ddMmMyBirtdhday = Console.ReadLine();
 
