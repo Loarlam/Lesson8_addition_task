@@ -9,18 +9,19 @@ namespace Addition_task
     {
         static void Main(string[] args)
         {
-            string ddMmMyBirtdhday;
-            int day, month;
-            DateTime birthdayDateInAGivenYear, now = DateTime.Now;
-
+            string enterMyBirtdhday;
+            int dayOfBirth, monthOfBirth;
+            DateTime birthdayDateInAGivenYear, nowDate;
 
             Console.Write("Дата рождения (dd.mm) = ");
-            ddMmMyBirtdhday = Console.ReadLine();
+            enterMyBirtdhday = Console.ReadLine();
 
-            day = Int32.Parse(ddMmMyBirtdhday[0..2]);
-            month = Int32.Parse(ddMmMyBirtdhday[3..5]);
+            dayOfBirth = Int32.Parse(enterMyBirtdhday[0..2]);
+            monthOfBirth = Int32.Parse(enterMyBirtdhday[3..5]);
 
-            birthdayDateInAGivenYear = new DateTime(now.Year, month, day);
+            nowDate = DateTime.Now;
+
+            birthdayDateInAGivenYear = new DateTime(nowDate.Year, monthOfBirth, dayOfBirth);
 
             Console.WriteLine($"До дня рождения осталось {(birthdayDateInAGivenYear-DateTime.Now).Days} дней");
             
